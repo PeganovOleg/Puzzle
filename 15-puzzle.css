@@ -4,6 +4,9 @@ p a{color: #888;}
 
 #controls{text-align: center;}
 #controls2{text-align: center;}
+#controls3{text-align: center;}
+#timer{text-align: center;}
+#timer23{text-align: center;}
 #controls button{
 	cursor: pointer;
 	outline: none;	
@@ -30,20 +33,20 @@ p a{color: #888;}
 	border-radius: 4px;
 }
 #puzzle span{
+ background:url("heart2.png");
+              background-size:100% 100%;
+              background-repeat: no-repeat ;
 	position: absolute;
 	display: block;
 	width: 80px;
 	height: 80px;
 	border-radius: 4px;
 }
+
 #puzzle span.number{
-	cursor: pointer;
-	font: bold 36px/80px Arial;
-	text-align: center;
-	text-shadow: -1px -1px 0 rgba(0,0,0, 0.5);
-	color: #00a1e0;
-}
-#puzzle span.number{
+              background:url("heart2.png");
+              background-size:100% 100%;
+              background-repeat: no-repeat ;
 	cursor: pointer;
 	font: bold 36px/80px Arial;
 	text-align: center;
@@ -51,8 +54,8 @@ p a{color: #888;}
 	color: #00a1e0;
 }
 #puzzle span.empty{background: transparent;}
-#puzzle span.number.light{background: #7ad9ff;}
-#puzzle span.number.dark{background: #00a1e0;color: blue;}
+#puzzle span.number.light{background:url("3.png"); background-size:100% 100%;background-repeat: no-repeat ;color: #00587a;}
+#puzzle span.number.dark{ background:url("heart2.png"); background-size:100% 100%;background-repeat: no-repeat ;color: white;}
 
 #puzzle.animate span{
 	-webkit-transition: 0.15s left, 0.15s top;
