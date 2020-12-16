@@ -9,7 +9,8 @@
 	puzzle2.hidden;
 
 	// Creates solved puzzle
-	solve();
+	//solve();
+	scramble();
 	
 	// Listens for click on puzzle cells
 	puzzle.addEventListener('click', function(e){
