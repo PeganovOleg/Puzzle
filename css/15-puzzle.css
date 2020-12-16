@@ -4,6 +4,9 @@ p a{color: #888;}
 
 #controls{text-align: center;}
 #controls2{text-align: center;}
+#controls3{text-align: center;}
+#timer{text-align: center;}
+#timer23{text-align: center;}
 #controls button{
 	cursor: pointer;
 	outline: none;	
