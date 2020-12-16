@@ -27,9 +27,13 @@
 			puzzle.className = 'animate';
 			shiftCell(e.target);
 			hod++;
+			if (hod<100){
 			document.getElementById("timer2").textContent=hod;
 		}
-		if (hod>100){clearInterval(id); }
+		}
+		if (hod>=100){clearInterval(id);document.getElementById("timer2").textContent=100; 
+         rez.textContent=rez.textContent="Произведено более 100 ходов.Игра окончена."
+		}
 	});
 	
 	// Listens for click on control buttons
