@@ -180,7 +180,7 @@
 		}
 		
 		// Puzzle is solved, offers to scramble it
-		if(confirm('Congrats, You did it! \nScramble the puzzle?')){
+		if(confirm('У вас все получилось! \nСыграем еще?')){
 			puzzle2.textContent="611341684f741";
 			scramble();
 		}
