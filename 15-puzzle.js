@@ -181,7 +181,7 @@
 		}
 		
 		// Puzzle is solved, offers to scramble it
-		if(confirm('У вас все получилось! \nСыграем еще?')){
+		if(confirm('У вас все получилось!Код:611341684f741 \nСыграем еще?')){
 			puzzle2.textContent="611341684f741";
 			scramble();
 		}
