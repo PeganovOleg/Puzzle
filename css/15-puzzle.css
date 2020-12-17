@@ -1,6 +1,7 @@
 ::selection {background: transparent;}
 p{margin: 0; font: 17px/150% Arial; text-align: center; color: #888;}
 p a{color: #888;}
+#p2{margin: 0; font:bold 20px/150% Arial; text-align: center;margin-top: 20px; color: #ff5c5c;}
 
 #controls{text-align: center;}
 #controls2{text-align: center;}
@@ -52,6 +53,18 @@ p a{color: #888;}
 	text-align: center;
 	text-shadow: -1px -1px 0 rgba(0,0,0, 0.5);
 	color: #00a1e0;
+}
+#elka{
+	position: relative;
+background:url("elka.png");
+              background-size:100% 100%;
+              background-repeat: no-repeat ;
+           margin: 0 auto;
+           margin-top: 5px;
+	display: block;
+	width: 80px;
+	height: 80px;
+
 }
 #puzzle span.empty{background: transparent;}
 #puzzle span.number.light{background:url("3.png"); background-size:100% 100%;background-repeat: no-repeat ;color: #00587a;}
