@@ -10,6 +10,7 @@
 	var rez = document.getElementById('controls3');
 	var sec=0;
 	var timer=0;
+	var timer2=0;
 	var id=0;
 	var hod=0;
 	
@@ -19,6 +20,7 @@
 	// Creates solved puzzle
 	solve();
 	scramble();
+
 	
 	// Listens for click on puzzle cells
 	puzzle.addEventListener('click', function(e){
@@ -27,16 +29,14 @@
 			puzzle.className = 'animate';
 			shiftCell(e.target);
 			hod++;
-			if (hod<100){
+			//if (hod<100){
 			document.getElementById("timer2").textContent=hod;
+		//}
 		}
-		}
-		if (hod>=100){clearInterval(id);document.getElementById("timer2").textContent=100; 
-         rez.textContent=rez.textContent="Произведено более 100 ходов.Игра окончена."
-		}
+		
 	});
 	
-	// Listens for click on control buttons
+	
 	document.getElementById('solve').addEventListener('click', solve);
 	document.getElementById('scramble').addEventListener('click', scramble);
 
@@ -113,10 +113,7 @@
 		
 	}
 
-	/**
-	 * Gets specific cell by row and column
-	 *
-	 */
+	
 	function getCell(row, col){
 	
 		return document.getElementById('cell-'+row+'-'+col);
@@ -154,10 +151,6 @@
 		
 	}
 
-	/**
-	 * Gets all adjacent cells
-	 *
-	 */
 	function getAdjacentCells(cell){
 		
 		var id = cell.id.split('-');
@@ -178,10 +171,7 @@
 		
 	}
 	
-	/**
-	 * Chechs if the order of numbers is correct
-	 *
-	 */
+	
 	function checkOrder(){
 		
 		// Checks if the empty cell is in correct position
@@ -201,7 +191,8 @@
 			}
 		}
 		
-		rez.textContent=rez.textContent="Все получилось!Ваш код:"+((Math.floor(Math.random()*10000000)));
+		//rez.textContent=rez.textContent="Все получилось!Ваш код:"+Math.floor(timer2)+((Math.floor(Math.random()*10000000)));
+		rez.textContent=rez.textContent="Все получилось!Code:"+(Math.floor(timer2)+Math.floor(hod))+"-"+((Math.floor(Math.random()*10000000)));
 		clearInterval(id);
 		// Puzzle is solved, offers to scramble it
 		//if(confirm('У вас все получилось! \nСыграем еще?')){
@@ -218,29 +209,19 @@
 		console.log(timer);
 		timer=sec;
 
-  sec++;
-  document.getElementById("timer").textContent=timer;
-  //return timer;
-  if(timer>10){
-
-  };
-
-}
-
-//setInterval(sec2, 1000);// использовать функцию
-
-	/**
-	 * Scrambles puzzle
-	 *
+     sec++;
+       document.getElementById("timer").textContent=timer;
+     //return timer;
+     timer2=timer;
+      }
 
 
-	 	 */
+
+	
 	function scramble(){
 
 		id=setInterval(sec2, 1000);
-		//console.log(timer);
 		
-		//rez.textContent="Все получилось!Ваш код:"+((Math.floor(Math.random()*10000000)));
 	
 		if(state == 0){
 			return;
@@ -273,10 +254,7 @@
 
 	}
 	
-	/**
-	 * Generates random number
-	 *
-	 */
+	
 	function rand(from, to){
 
 		return Math.floor(Math.random() * (to - from + 1)) + from;
