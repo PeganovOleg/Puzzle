@@ -8,18 +8,23 @@
 	var puzzle = document.getElementById('puzzle');
 	var puzzle2 = document.getElementById('display');
 	var rez = document.getElementById('controls3');
+	var pozdr=document.getElementById('p2');
+	var elochka=document.getElementById('elka');
 	var sec=0;
 	var timer=0;
 	var timer2=0;
 	var id=0;
 	var hod=0;
-	
+	pozdr.style.display = 'none';  
+	elochka.style.display = 'none';
+
 	puzzle2.hidden;
 	rez.hidden;
-
-	// Creates solved puzzle
+    
 	solve();
 	scramble();
+
+
 
 	
 	// Listens for click on puzzle cells
@@ -39,6 +44,9 @@
 	
 	document.getElementById('solve').addEventListener('click', solve);
 	document.getElementById('scramble').addEventListener('click', scramble);
+	document.getElementById('elka');
+
+	
 
 	/**
 	 * Creates solved puzzle
@@ -192,8 +200,10 @@
 		}
 		
 		//rez.textContent=rez.textContent="Все получилось!Ваш код:"+Math.floor(timer2)+((Math.floor(Math.random()*10000000)));
-		rez.textContent=rez.textContent="Все получилось!Code:"+(Math.floor(timer2)+Math.floor(hod))+"-"+((Math.floor(Math.random()*10000000)));
+		rez.textContent=rez.textContent="Все получилось! CODE:"+(Math.floor(timer2)+Math.floor(hod))+"-"+((Math.floor(Math.random()*10000000)));
 		clearInterval(id);
+		pozdr.style.display = 'block';  
+	elochka.style.display = 'block';
 		// Puzzle is solved, offers to scramble it
 		//if(confirm('У вас все получилось! \nСыграем еще?')){
 			//puzzle2.textContent="611341684f741";
@@ -219,6 +229,7 @@
 
 	
 	function scramble(){
+		
 
 		id=setInterval(sec2, 1000);
 		
