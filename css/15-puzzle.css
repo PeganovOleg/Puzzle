@@ -1,6 +1,7 @@
 ::selection {background: transparent;}
 p{margin: 0; font: 17px/150% Arial; text-align: center; color: #888;}
 p a{color: #888;}
+body{ color:#c7fcec; }
 #p2{margin: 0; font:bold 20px/150% Arial; text-align: center;margin-top: 20px; color: #ff5c5c;}
 
 #controls{text-align: center;}
@@ -62,8 +63,8 @@ background:url("elka.png");
            margin: 0 auto;
            margin-top: 5px;
 	display: block;
-	width: 80px;
-	height: 80px;
+	width: 120px;
+	height: 120px;
 
 }
 #puzzle span.empty{background: transparent;}
