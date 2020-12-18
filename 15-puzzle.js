@@ -15,11 +15,11 @@
 	var timer2=0;
 	var id=0;
 	var hod=0;
-	pozdr.style.display = 'none';  
-	elochka.style.display = 'none';
+	//pozdr.style.display = 'none';  
+	//elochka.style.display = 'none';
 
-	puzzle2.hidden;
-	rez.hidden;
+	//puzzle2.hidden;
+	//rez.hidden;
     
 	solve();
 	scramble();
@@ -34,7 +34,9 @@
 			puzzle.className = 'animate';
 			shiftCell(e.target);
 			hod++;
-			//if (hod<100){
+			//if (hod>10){
+            // 	rez.textContent="Готово! CODE:"+( ((Math.floor(timer2)+Math.floor(hod))+21)+"-"+(Math.floor(Math.random()*100000))+""+(Math.floor(timer2)+12) ) ;
+			//}
 			document.getElementById("timer2").textContent=hod;
 		//}
 		}
@@ -200,7 +202,7 @@
 		}
 		
 		//rez.textContent=rez.textContent="Все получилось!Ваш код:"+Math.floor(timer2)+((Math.floor(Math.random()*10000000)));
-		rez.textContent=rez.textContent="Все получилось! CODE:"+(Math.floor(timer2)+Math.floor(hod))+"-"+((Math.floor(Math.random()*10000000)));
+		rez.textContent="Готово! CODE:"+( ((Math.floor(timer2)+Math.floor(hod))+21)+"-"+(Math.floor(Math.random()*100000))+""+(Math.floor(timer2)+12) ) ;
 		clearInterval(id);
 		pozdr.style.display = 'block';  
 	elochka.style.display = 'block';
