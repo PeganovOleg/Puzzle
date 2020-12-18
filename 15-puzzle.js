@@ -15,8 +15,8 @@
 	var timer2=0;
 	var id=0;
 	var hod=0;
-	//pozdr.style.display = 'none';  
-	//elochka.style.display = 'none';
+	pozdr.style.display = 'none';  
+	elochka.style.display = 'none';
 
 	//puzzle2.hidden;
 	//rez.hidden;
